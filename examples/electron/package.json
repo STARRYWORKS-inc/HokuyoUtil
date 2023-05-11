@@ -1,0 +1,28 @@
+{
+	"name": "hokuyo_util_example",
+	"version": "1.0.0",
+	"productName": "HokuyoUtil_Example",
+	"keywords": [],
+	"author": "STARRYWORKS inc.",
+	"license": "MIT",
+	"scripts": {
+		"clean": "rimraf dist",
+		"build:render": "parcel build src/render/index.html --public-url ./ --dist-dir ./dist/render",
+		"build:electron": "tsc -p src",
+		"build": "npm run build:render && npm run build:electron",
+		"dist": "npm run build && electron-builder",
+		"dev": "npm run build && electron dist/main.js"
+	},
+	"devDependencies": {
+		"@parcel/transformer-typescript-tsc": "^2.8.3",
+		"@types/node": "^18.11.9",
+		"electron": "^22.0.0",
+		"electron-builder": "^23.4.0",
+		"electron-reload": "^2.0.0-alpha.1",
+		"npm-run-all": "^4.1.5",
+		"parcel": "^2.8.3",
+		"rimraf": "^3.0.0",
+		"osc-js": "^2.3.2",
+		"typescript": "^4.8.4"
+	}
+}

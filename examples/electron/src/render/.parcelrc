@@ -1,0 +1,8 @@
+{
+	"extends": "@parcel/config-default",
+	"transformers": {
+		"script/index.ts": [
+			"@parcel/transformer-typescript-tsc"
+		]
+	}
+}
